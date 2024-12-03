@@ -1,0 +1,258 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: sans-serif;
+}
+
+.container{
+  background-color: #1B1B1A;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* navbar*/
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  padding: 20px 0;
+ 
+}
+
+ul li{
+  display: inline-block;
+}
+
+ul li a{
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 520;
+  color: white;
+  font-size: 18px;
+}
+
+.logo {
+  width: 40px;
+  transition: .9s;
+  animation: spinReverse 1.5s ease-in-out forwards; 
+  animation-iteration-count: 2;
+
+}
+
+@keyframes spinReverse {
+  0% {
+      transform: rotate(0deg) scale(1);
+  }
+  100% {
+      transform: rotate(-360deg) scale(1.2); 
+  }
+}
+
+/* end */
+
+/* contant */
+
+.contant{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.contant .text {
+  color: #fff;
+  width: 40%;
+}
+
+.contant .text h2{
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.contant .text p{
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.btn{
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.contant .image {
+  width: 30%;
+}
+
+.contant .image img{
+  width: 180px;
+
+}
+
+/* end */
+
+/* icons */
+
+.icons{
+ position: absolute;
+ left: 50%;
+ bottom: 20px;
+ transform: translateX(-50%);
+ transition: .5s;
+  
+}
+
+/* icons animation */
+.icons img {
+  width: 40px;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: appear 1s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes appear {
+  to {
+      opacity: 1;
+      transform: translateX(0); 
+  }
+}
+
+.icons img:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.icons img:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.icons img:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.icons img:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.icons img:nth-child(5) {
+  animation-delay:1s;
+}
+
+/* end */
+
+/* media */
+
+@media (max-width:590px){
+  nav{
+      flex-direction: column;
+      width: 100%;
+  }
+  ul li a{
+      margin: 0 3px;
+      font-weight: 500;
+      font-size: 14px;
+  }
+  
+  .logo {
+      width: 40px;
+      margin-bottom: 5px;
+  }
+
+  .contant{
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .contant .text , .contant .image {
+      width: 70%;
+  }
+  
+  .contant .text h2{
+      font-size: 30px;
+  }
+  
+  .contant .text p{
+      font-size: 15px;
+      
+  }
+
+  .contant .image{
+      position: absolute;
+      left: 35%;
+      bottom: 90px;
+   }
+
+  .btn{
+      position: absolute;
+      left: 40%;
+      bottom: 59%;
+   }
+  .icons{
+     position: absolute;
+     left: 50%;
+     bottom: 20px;
+     transform: translateX(-45%);
+     transition: .5s;
+     display: flex;
+      
+  }
+  
+}
+
+@media (max-width:480px){
+  .btn{
+      position: absolute;
+      left: 40%;
+      bottom: 57%;
+   }
+  .contant .image{
+      position: absolute;
+      left: 33%;
+      bottom: 90px;
+   }
+   .icons{
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-45%);
+      transition: .5s;
+      display: flex;
+       
+   }
+}
+
+@media (max-width:400px){
+  .btn{
+      position: absolute;
+      left: 40%;
+      bottom: 57%;
+   }
+  .contant .image{
+      position: absolute;
+      left: 30%;
+      bottom: 90px;
+   }
+   .icons{
+      position: absolute;
+      left: 52%;
+      bottom: 20px;
+      transform: translateX(-45%);
+      transition: .5s;
+      display: flex;
+       
+   }
+}
+
+/* end */
